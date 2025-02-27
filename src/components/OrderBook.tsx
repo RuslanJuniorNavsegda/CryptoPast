@@ -20,8 +20,12 @@ export const OrderBook = () => {
 
   return (
     <div className="order-book">
-      <h3>Order Book (BTC/USDT)</h3>
+      <h3>Order Book</h3>
       <div className="orders">
+        <div className="order-header">
+          <span>Price (USDT)</span>
+          <span>Amount (BTC)</span>
+        </div>
         {orders.map((order, i) => (
           <div key={i} className={`order ${order.type}`}>
             <span>{order.price.toFixed(2)}</span>

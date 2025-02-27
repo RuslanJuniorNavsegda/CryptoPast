@@ -6,11 +6,14 @@ export const Wallet = () => {
   return (
     <div className="wallet">
       {account ? (
-        <p>
-          Connected: {account.slice(0, 6)}...{account.slice(-4)}
-        </p>
+        <div className="wallet-info">
+          <span className="wallet-label">Connected:</span>
+          <span className="wallet-address">
+            {account.slice(0, 6)}...{account.slice(-4)}
+          </span>
+        </div>
       ) : (
-        <button onClick={connectWallet}>Connect MetaMask</button>
+        <button onClick={connectWallet}>Connect Wallet</button>
       )}
     </div>
   );
